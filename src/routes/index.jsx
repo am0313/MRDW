@@ -6,7 +6,7 @@ import NoticePage from "../pages/notice";
 import authRoutes from "./auth";
 import CompanyMRDWPage from "../pages/companyMRDW";
 import QnaPage from "../pages/Qna";
-import PersonQa from "../pages/Person_qa";
+import PersonQa from "../pages/person_qa";
 
 export const routes = [
   ...authRoutes,
