@@ -6,7 +6,7 @@ import NoticePage from "../pages/notice";
 import authRoutes from "./auth";
 import CompanyMRDWPage from "../pages/companyMRDW";
 import QnaPage from "../pages/Qna";
-import Person_qaPage from "../pages/Person_qa";
+import PersonQa from "../pages/Person_qa";
 
 export const routes = [
   ...authRoutes,
@@ -36,7 +36,7 @@ export const routes = [
   },
   {
     path: "/person_qa",
-    element: <Person_qaPage />
+    element: <PersonQa />
   }
 
 ]
