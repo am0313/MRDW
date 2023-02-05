@@ -1,10 +1,10 @@
 import React from 'react'
 
-function CompanyMRDW() {
+function AboutPage() {
     return (
         <div>MRDW
         </div>
     )
 }
 
-export default CompanyMRDW
+export default AboutPage

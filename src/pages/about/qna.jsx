@@ -1,10 +1,10 @@
 import React from 'react'
 
-function QnaPage() {
+function QNAPage() {
     return (
         <div>Qna list
         </div>
     )
 }
 
-export default QnaPage
+export default QNAPage
