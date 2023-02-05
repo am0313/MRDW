@@ -1,14 +1,16 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom"
+import styles from "./nav.module.scss"
+import footerStyles from "./footer.module.scss"
+import Icon from '@mdi/react';
+import { mdiAccountGroupOutline, mdiAccountTieVoiceOutline, mdiCogOutline, mdiEyeOutline } from '@mdi/js';
 
 function Nav() {
     const navRoutes = [
-        { path: "/gather", name: "모집 중" },
-        { path: "/browse", name: "둘러보기" },
-        { path: "/notice", name: "공지사항" },
+        { path: "/gather", name: "모집 중", icon: mdiAccountGroupOutline },
+        { path: "/browse", name: "둘러보기", icon: mdiEyeOutline },
+        { path: "/notice", name: "공지사항", icon: mdiAccountTieVoiceOutline },
     ]
-
-    const linkStyle = "absolute top-0 left-0 right-0 bottom-0 flex items-center px-10"
 
     const navigate = useNavigate();
 
@@ -31,23 +33,27 @@ function Nav() {
             <ul>
                 {navRoutes.map((i) => <li key={i.path} className="w-full h-12 relative">
                     <NavLink to={i.path} className={({ isActive }) =>
-                        isActive ? `bg-stone-200 ${linkStyle}` : linkStyle
-                    }>{i.name}</NavLink>
+                        isActive ? `bg-stone-200 ${styles.nav_menu}` : styles.nav_menu
+                    }>
+                        <Icon path={i.icon} size={0.8} className="fill-stone-50 stroke-stone-50" />
+                        {i.name}
+                    </NavLink>
                 </li>)}
 
                 <hr className="mx-8 border-stone-200" />
 
                 <li className="w-full h-12 relative">
                     <NavLink to="/settings" className={({ isActive }) =>
-                        isActive ? `bg-stone-200 ${linkStyle}` : linkStyle
+                        isActive ? `bg-stone-200 ${styles.nav_menu}` : styles.nav_menu
                     }>
+                        <Icon path={mdiCogOutline} size={0.8} className="fill-stone-50 stroke-stone-50" />
                         설정
                     </NavLink>
                 </li>
             </ul>
-            <div>
-                <input type="text" />
-                <div>what</div>
+            <div className="flex flex-col">
+                <input type="text" className={styles.search_input} />
+                <NavLink to="/about" className={`${footerStyles.link} w-full text-center my-2`}>무릉도원이란?</NavLink>
             </div>
         </div>
     </nav>;

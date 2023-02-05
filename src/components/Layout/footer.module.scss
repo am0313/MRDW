@@ -1,0 +1,6 @@
+.link {
+    @apply text-xs whitespace-pre text-stone-400 hover:text-stone-900 transition-colors transform duration-500 p-0.5;
+}
+.inc {
+    @apply w-full text-center text-xs text-stone-500 mt-2;
+}

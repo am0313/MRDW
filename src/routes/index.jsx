@@ -5,6 +5,7 @@ import Home from "../pages/home";
 import NoticePage from "../pages/notice";
 import authRoutes from "./auth";
 import aboutRoutes from "./about";
+import SettingsPage from "../pages/settings";
 
 export const routes = [
   ...authRoutes,
@@ -24,6 +25,10 @@ export const routes = [
   {
     path: "/notice",
     element: <NoticePage />
+  },
+  {
+    path: "/settings",
+    element: <SettingsPage />
   },
 ]
 

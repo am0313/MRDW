@@ -1,0 +1,8 @@
+.nav_menu {
+    @apply text-sm absolute top-0 left-0 right-0 bottom-0 flex items-center px-10 gap-2;
+    letter-spacing: -0.5px;
+}
+
+.search_input {
+    @apply mx-2 lg:mx-8 h-6 flex border rounded-xl border-stone-300;
+}
